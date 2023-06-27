@@ -11,10 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-import dotenv
-
-dotenv.read_dotenv()
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api.settings." + os.environ.get("ENVIRONMENT"))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api.settings')
 
 application = get_asgi_application()
