@@ -3,6 +3,11 @@ from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.views import APIView
 
+class ping(APIView):
+
+    def get(self, request):
+        return HttpResponse('Hello!', status=status.HTTP_200_OK)
+
 class send(APIView):
 
     def post(self, request):
