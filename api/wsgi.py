@@ -11,11 +11,10 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-import environ
+import dotenv
 
-env = environ.Env()
-environ.Env.read_env()
+dotenv.read_dotenv()
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api.settings." + env("ENVIRONMENT"))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api.settings." + os.environ.get("ENVIRONMENT"))
 
 application = get_wsgi_application()
