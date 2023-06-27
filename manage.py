@@ -8,8 +8,8 @@ def main():
     """Run administrative tasks."""
     dotenv.read_dotenv()
 
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reviewramp.settings." + os.environ.get("ENVIRONMENT"))
-    
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api.settings." + os.environ.get("ENVIRONMENT"))
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
