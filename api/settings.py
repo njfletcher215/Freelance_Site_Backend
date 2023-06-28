@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-_hyx#rmy=-ddqs25g6pvd*8&jmg8_yp0u%zl5b#3=!%n6rm_f1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nathanfletcher.dev, www.nathanfletcher.dev']
 
 
 # Application definition
